@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;    
+}
+body{
+    background:url(../images/background.jpg) no-repeat center center #000;
+    background-size: cover;
+}
+.container{
+    width: 80%;
+    max-width: 540px;
+    backdrop-filter: blur(10px) brightness(0.5);
+    border: 1px solid white;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 100px auto 20px;
+    padding: 40px 40px 70px;
+}
+.container h2{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.container h2 img{
+    width: 35px;
+    margin-right: 20px;
+    filter: invert(1);
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(240 248 255 / 20%);
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 50px;
+    transition: all 0.1s ease;
+}
+.row:hover{
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
+}
+.row input{
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0 20px;
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.row input::placeholder{
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+.row button{
+    width: 30%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(240 248 255 / 30%);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+#list_container{
+    margin-top: 25px;
+    padding: 0 10px;
+}
+#list_container li{
+    list-style: none;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    padding: 10px 10px 10px 40px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+#list_container li::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(240 248 255 / 20%);
+    border-radius: 6px;
+}
+#list_container li.checked{
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+#list_container li.checked::before{
+    background: url(../images/check.png) no-repeat center center rgb(240 248 255 / 20%);
+    background-size: 14px;
+}
+.delete_btn{
+    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: url(../images/cross.png) no-repeat center center rgb(240 248 255 / 20%);
+    background-size: 12px;
+}
+.delete_btn:hover{
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+@media only screen and (max-width:764px){
+    .container {
+        width: 90%;
+        border-radius: 12px;
+        margin: 50px auto 20px;
+        padding: 30px 20px 30px;
+    }
+    .row{
+        margin-top: 25px;
+        border-radius: 8px;
+    }
+    #list_container li {
+        padding: 10px 10px 10px 30px;
+    }
+}
